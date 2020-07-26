@@ -1,0 +1,329 @@
+[
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "model_id",
+				"type": "uint256"
+			}
+		],
+		"name": "getNumGradientsforModel",
+		"outputs": [
+			{
+				"name": "num",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getNumModels",
+		"outputs": [
+			{
+				"name": "model_cnt",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "model_id",
+				"type": "uint256"
+			},
+			{
+				"name": "agg_addr",
+				"type": "address"
+			},
+			{
+				"name": "_new_model_error",
+				"type": "uint256"
+			},
+			{
+				"name": "_new_weights_addr",
+				"type": "bytes32[]"
+			}
+		],
+		"name": "evalGradientfromAvg",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "model_id",
+				"type": "uint256"
+			},
+			{
+				"name": "gradient_id",
+				"type": "uint256"
+			}
+		],
+		"name": "getAvg",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bytes32[]"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_gradient_id",
+				"type": "uint256"
+			},
+			{
+				"name": "_new_model_error",
+				"type": "uint256"
+			},
+			{
+				"name": "_new_weights_addr",
+				"type": "bytes32[]"
+			}
+		],
+		"name": "evalGradient",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "model_i",
+				"type": "uint256"
+			}
+		],
+		"name": "getModel",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "bytes32[]"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "model_id",
+				"type": "uint256"
+			},
+			{
+				"name": "_grad_addr",
+				"type": "bytes32[]"
+			}
+		],
+		"name": "addGradient",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "model_i",
+				"type": "uint256"
+			}
+		],
+		"name": "getUpdatedModel",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "bytes32[]"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_avg",
+				"type": "bytes32[]"
+			},
+			{
+				"name": "model_id",
+				"type": "uint256"
+			},
+			{
+				"name": "numGrads",
+				"type": "uint256"
+			}
+		],
+		"name": "addAvg",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getNumUpdatedModels",
+		"outputs": [
+			{
+				"name": "model_cnt",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_weights",
+				"type": "bytes32[]"
+			},
+			{
+				"name": "initial_error",
+				"type": "uint256"
+			},
+			{
+				"name": "target_error",
+				"type": "uint256"
+			},
+			{
+				"name": "best_error",
+				"type": "uint256"
+			}
+		],
+		"name": "addUpdatedModel",
+		"outputs": [],
+		"payable": true,
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_weights",
+				"type": "bytes32[]"
+			},
+			{
+				"name": "initial_error",
+				"type": "uint256"
+			},
+			{
+				"name": "target_error",
+				"type": "uint256"
+			},
+			{
+				"name": "best_error",
+				"type": "uint256"
+			}
+		],
+		"name": "addModel",
+		"outputs": [],
+		"payable": true,
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "model_id",
+				"type": "uint256"
+			},
+			{
+				"name": "gradient_id",
+				"type": "uint256"
+			}
+		],
+		"name": "getGradient",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "address"
+			},
+			{
+				"name": "",
+				"type": "bytes32[]"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "bytes32[]"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	}
+]
